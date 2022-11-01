@@ -1,0 +1,143 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* min-height: 100vh; */
+    background: #edf1f4;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-start; */
+    margin-top: 50px;
+    padding: 25px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5));
+    border-radius: 30px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fff;
+}
+
+.container .header {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 400;
+    letter-spacing: 2px;
+}
+
+.container #myInput {
+    width: 500px;
+    height: 50px;
+    font-size: 25px;
+    border: 2px solid #fff;
+    background-color: #edf1f4;
+    border-radius: 8px;
+    font-family: cascadia code, 'sans-serif';
+    padding-left: 20px;
+}
+
+.container #myInput:focus {
+    border-color: #888;
+}
+
+.container .raper {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Button style  */
+button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    cursor: pointer;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+    margin-left: 10px;
+}
+
+button:hover {
+    border: 1px solid white;
+}
+
+button:active {
+    box-shadow: 4px 4px 12px #c5c5c5,
+        -4px -4px 12px #ffffff;
+}
+
+/* ul list styling */
+#myTodoList li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style: none;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+    margin: 10px;
+    border-radius: 10px;
+    font-style: cascadia code, 'sans-serif';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#myTodoList li:nth-child(odd) {
+    background: #fff5f5;
+}
+
+#myTodoList li:hover {
+    background: #ddd;
+}
+
+#myTodoList li.checked {
+    background: rgb(169, 169, 169);
+    color: #fff;
+    text-decoration: line-through;
+    text-decoration: line-through 3px rgb(19, 255, 11);
+}
+
+#myTodoList li.checked::before {
+    content: '';
+    position: absolute;
+    background: greenyellow;
+    top: 16px;
+    left: 16px;
+    border: 1px solid rgb(19, 255, 11);
+    border-radius: 3px;
+    /* transform: rotate(45deg); */
+    height: 15px;
+    width: 15px;
+}
+
+#myTodoList .fa {
+    float: right;
+}
+
+#myTodoList span {
+    font-family: cascadia code, 'sans-serif';
+    font-size: 22px;
+    padding-left: 20px;
+}
